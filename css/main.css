@@ -10,8 +10,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   box-sizing: border-box;
-  font-family: "Noto Sans", sans-serif;
-  line-height: 1.3;
+  font: normal 100%/1.3 "Noto Sans", sans-serif;
 }
 
 *, *::before, *::after {
@@ -27,12 +26,16 @@ body {
   display: block;
 }
 
-.wrapper {
+section {
   background-color: #e5c30a;
+}
+
+.wrapper {
   max-width: 45em;
   display: flex;
   flex-wrap: wrap;
   padding: 1.3rem;
+  margin: 0 auto;
 }
 
 .section-letter {
@@ -43,18 +46,26 @@ body {
   width: 50%;
 }
 
-h2 {
+section h2 {
   margin: 0;
   padding-bottom: 0;
 }
 
-div p {
+section p {
   margin: 0;
 }
 
 @media only screen and (min-width: 25em) {
 
+  .section-letter {
+    width: 45%;
+    padding: 0 .5rem;
+  }
 
+  .section-icon {
+    width: 45%;
+    padding: 0 .5rem;
+  }
 
 }
 
@@ -79,6 +90,7 @@ div p {
   .section-letter, .section-icon {
     width: 13%;
     margin: 1rem;
+    padding: 0;
   }
 
   .section-body {
@@ -94,12 +106,54 @@ div p {
     line-height: 1.5;
   }
 
+  .section-icon {
+    order: 10;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .section-letter, .section-icon {
+    width: 15%;
+    margin: 1rem;
+  }
+
+  .section-body {
+    width: 55%;
+  }
+
 }
 
 @media only screen and (min-width: 90em) {
 
   html {
     font-size: 130%;
+  }
+
+  .section-icon {
+    order: 10;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .section-letter, .section-icon {
+    width: 15%;
+    margin: 1rem;
+  }
+
+  .section-body {
+    width: 55%;
   }
 
 }
